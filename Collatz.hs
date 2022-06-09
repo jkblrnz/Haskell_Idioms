@@ -1,4 +1,5 @@
-module Collatz (collatzSequence, collatz, collatzCount, collatzTest) where
+module Collatz where
+-- module Collatz (collatzSequence) where
 
 collatz :: Int -> Int
 collatz 1 = 1
