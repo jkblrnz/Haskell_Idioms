@@ -1,4 +1,4 @@
-module Collatz (collatzSequence, collatz, collatzCount) where
+module Collatz (collatzSequence, collatz, collatzCount, collatzTest) where
 
 collatz :: Int -> Int
 collatz 1 = 1
@@ -23,3 +23,9 @@ collatzCount n
   | n == -17  = Just 0
   | even n    = succ <$> collatzCount (div n 2)
   | otherwise = succ <$> collatzCount (n * 3 + 1)
+
+collatzTest :: IO ()
+collatzTest = do
+  print (collatzSequence 1)
+  print (collatzSequence 6)
+  print (collatzSequence 23)
